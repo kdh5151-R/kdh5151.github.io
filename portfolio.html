@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>김도현 | 인프라 엔지니어 포트폴리오</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --bg-color: #f3f4f6;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --white: #ffffff;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Noto Sans KR', sans-serif; }
+        body { background-color: var(--bg-color); color: var(--text-dark); line-height: 1.6; }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+
+        /* Layout */
+        .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            padding: 60px 20px;
+            border-radius: 0 0 20px 20px;
+            text-align: center;
+            margin-bottom: 40px;
+            box-shadow: var(--shadow);
+        }
+        header h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 10px; }
+        header p { font-size: 1.1rem; opacity: 0.9; }
+        header .contact-info { margin-top: 20px; font-size: 0.9rem; }
+        header .contact-info span { margin: 0 10px; }
+
+        /* Section Styles */
+        section { background: var(--white); padding: 30px; border-radius: 15px; margin-bottom: 30px; box-shadow: var(--shadow); }
+        h2 { font-size: 1.5rem; color: var(--secondary-color); border-bottom: 2px solid #e5e7eb; padding-bottom: 10px; margin-bottom: 20px; }
+        h2 i { margin-right: 10px; }
+
+        /* Profile & Skills Grid */
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        @media (max-width: 768px) { .grid-2 { grid-template-columns: 1fr; } }
+
+        /* Skills Tags */
+        .skill-tags { display: flex; flex-wrap: wrap; gap: 10px; }
+        .skill-tag { background-color: #e0e7ff; color: var(--secondary-color); padding: 5px 12px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; }
+
+        /* Experience Timeline-ish Style */
+        .job-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; flex-wrap: wrap; }
+        .company-name { font-size: 1.2rem; font-weight: 700; color: var(--text-dark); }
+        .job-period { color: var(--text-light); font-size: 0.9rem; background: #f3f4f6; padding: 2px 8px; border-radius: 4px; }
+        .job-role { color: var(--primary-color); font-weight: 600; margin-top: 5px; }
+
+        /* Projects List */
+        .project-card { border-left: 4px solid var(--primary-color); padding-left: 20px; margin-bottom: 30px; }
+        .project-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 5px; display: flex; align-items: center; }
+        .project-date { font-size: 0.8rem; color: var(--text-light); margin-left: 10px; font-weight: 400; }
+        .project-desc { list-style-type: disc; margin-left: 20px; margin-top: 10px; color: #4b5563; }
+        .project-desc li { margin-bottom: 5px; }
+
+        /* Stats Counter */
+        .stats-container { display: flex; justify-content: space-around; margin: 20px 0; text-align: center; }
+        .stat-item h3 { font-size: 2rem; color: var(--primary-color); }
+        .stat-item p { font-size: 0.9rem; color: var(--text-light); }
+
+        /* Footer */
+        footer { text-align: center; padding: 20px; color: var(--text-light); font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>김도현</h1>
+            <p>Infrastructure Engineer | System Administrator</p>
+            <div class="contact-info">
+                <span><i class="fas fa-envelope"></i> [이메일 주소 입력]</span>
+                <span><i class="fas fa-phone"></i> [연락처 입력]</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <div class="grid-2">
+            <section>
+                <h2><i class="fas fa-user-tie"></i> Profile</h2>
+                <p style="margin-bottom: 15px;">
+                    안정적인 시스템 운영과 효율적인 인프라 구축을 지향하는 3년 차 인프라 엔지니어입니다. 
+                    IDC 물리 서버 및 가상화 환경 운영, DB 성능 최적화, 그리고 업무 자동화를 통해 시스템 안정성을 높인 경험이 있습니다.
+                </p>
+                <ul style="line-height: 1.8;">
+                    <li><strong>현 직장:</strong> 양재아이티 (개발2팀 인프라부서)</li>
+                    <li><strong>경력:</strong> 2022.04 ~ 재직중 (3년)</li>
+                    <li><strong>주요 역할:</strong> 서버 구축/운영, DB 관리, 네트워크 보안</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2><i class="fas fa-laptop-code"></i> Tech Stack</h2>
+                <div style="margin-bottom: 15px;">
+                    <strong>OS & Server</strong>
+                    <div class="skill-tags" style="margin-top:5px;">
+                        <span class="skill-tag">Windows Server</span>
+                        <span class="skill-tag">Hyper-V</span>
+                        <span class="skill-tag">IIS</span>
+                        <span class="skill-tag">Synology NAS</span>
+                    </div>
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <strong>Database</strong>
+                    <div class="skill-tags" style="margin-top:5px;">
+                        <span class="skill-tag">Oracle</span>
+                        <span class="skill-tag">Toad</span>
+                        <span class="skill-tag">Exem MaxGauge</span>
+                    </div>
+                </div>
+                <div>
+                    <strong>Tools & Languages</strong>
+                    <div class="skill-tags" style="margin-top:5px;">
+                        <span class="skill-tag">Batch Script</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">VB.NET</span>
+                        <span class="skill-tag">SVN</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section>
+            <div class="stats-container">
+                <div class="stat-item">
+                    <h3>87대</h3>
+                    <p>IDC 물리/가상 서버 운영</p>
+                </div>
+                <div class="stat-item">
+                    <h3>3700+</h3>
+                    <p>만원 (연봉 기준 성과 입증)</p>
+                </div>
+                <div class="stat-item">
+                    <h3>10+</h3>
+                    <p>주요 인프라 프로젝트 수행</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2><i class="fas fa-briefcase"></i> Professional Experience</h2>
+            
+            <div class="job-header">
+                <div>
+                    <div class="company-name">양재아이티 (Yangjae IT)</div>
+                    <div class="job-role">개발2팀 인프라부서 / 사원</div>
+                </div>
+                <div class="job-period">2022.04 - 현재</div>
+            </div>
+            <p style="margin-bottom: 30px; color: #666;">
+                국내 및 해외 물류 솔루션 전문 기업 (매출 42.8억, 직원 48명 규모)
+            </p>
+
+            <div class="project-card">
+                <div class="project-title">IDC 서버 운영 및 유지보수 <span class="project-date">2023.01 - 현재</span></div>
+                <ul class="project-desc">
+                    <li>가산 IDC 내 <strong>총 87대 서버 관리</strong> (물리서버 70대, 가상서버 17대)</li>
+                    <li>방화벽 정책 관리 및 외부 침입 차단, 포트 보안 설정</li>
+                    <li>장애 발생 시 원격 접속 대응 및 시스템 안정화</li>
+                    <li>MS Hyper-V 기반 가상화 환경 구축 및 호스트 운영</li>
+                </ul>
+            </div>
+
+            <div class="project-card">
+                <div class="project-title">시스템 자동화 및 DB 모니터링 도입 <span class="project-date">2024.07 - 2025.03</span></div>
+                <ul class="project-desc">
+                    <li><strong>자동화 스크립트 개발:</strong> Oracle 리스너 로그(4GB 이상), 시스템 AUD 테이블, IIS 로그 자동 정리 배치 파일 생성 및 스케줄러 등록</li>
+                    <li><strong>Exem MaxGauge 도입:</strong> Oracle DB 실시간 트랜잭션, CPU, Memory 모니터링 시스템 구축</li>
+                    <li>비효율적인 쿼리 분석 및 튜닝 요청을 통한 DB 성능 개선</li>
+                </ul>
+            </div>
+
+            <div class="project-card">
+                <div class="project-title">신규 서버 구축 및 마이그레이션 <span class="project-date">2023.01 - 2024.04</span></div>
+                <ul class="project-desc">
+                    <li><strong>Synology NAS 도입:</strong> 사내 2차 백업 시스템 구축 (RS1221RP+ 등 4대), 스냅샷 정책 수립으로 랜섬웨어 대비</li>
+                    <li><strong>신규 APP/DB 서버 셋팅:</strong> IP 할당, 방화벽 NAT/Port 오픈, IIS 및 Oracle 환경 구성</li>
+                    <li><strong>서버 이전 프로젝트:</strong> 6개 고객사(엔엔알, 미쓰이소꼬 등) 서버 및 데이터 마이그레이션 완수</li>
+                    <li>물리 서버 디스크 교체(RAID 1 구성) 및 장애 대비 백업 수행</li>
+                </ul>
+            </div>
+
+            <div class="project-card">
+                <div class="project-title">소프트웨어 라이선스 및 자산 관리 <span class="project-date">2023.01 - 현재</span></div>
+                <ul class="project-desc">
+                    <li>MS SPLA 계약 관리 및 비용 절감 방안 수립 (Core 단위 최적화)</li>
+                    <li>DevExpress, Visual Studio, V3 IS 9.0 등 개발 및 보안 소프트웨어 배포/운영 관리</li>
+                </ul>
+            </div>
+
+        </section>
+    </div>
+
+    <footer>
+        <p>Copyright © 2025 Kim Do-hyun. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
